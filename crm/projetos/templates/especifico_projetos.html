@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+<!-------------------------------------------------------->
+{% block links %}
+<link rel="stylesheet" href="{{url_for('static', filename='css/projeto-especifico.css')}}">
+{% endblock links %}
+<!-------------------------------------------------------->
+{% block content %}
+<div class=" row justify-content-center">
+    <div class="card mb-3 d-inline-flex" id="rowCard">
+        <div class="row">
+            <div class="col-4">
+                <img src="{{url_for('static', filename='imgs/vasos.webp')}}" alt="Card image cap" class="rounded img-fluid">
+            </div>
+            <div class="col-8">
+                <h5><strong class="color1">{{projeto.nome}}</strong></h5>
+                <p class="color5"><strong>ID: {{projeto.id}}</strong></p>
+                <hr>
+                <div class="row">
+                    <div class="col-5">
+                        <p class="color5"><strong class="color3">TIPO:<br></strong> CRM </p>
+                        <p class="color5"><strong class="color3">CLIENTE:<br></strong>Seu Kotler</p>
+                        <p class="color5"><strong class="color3">SITE:<br></strong><a href="#">CRM do Seu Kotler</a></p>
+                        <p class="color5"><strong class="color3">INÍCIO:<br></strong>dd/mm/aaaa</p>
+                        <p class="color5"><strong class="color3">PRAZO:<br></strong>dd/mm/aaaa</p>
+                        <p class="color5"><strong class="color3">VALOR:<br></strong> (R$) XX,XX</p>
+                        <p class="color5"><strong class="color3">PRODUCT OWNER:<br></strong>FULANO DE TAL</p>
+                    </div>
+                    <div class="col-7 pl-0">
+                        <p class="color5"><strong class="color3">NÍVEL DE SATISFAÇÃO: <br></strong>8</p>
+                        <hr>
+                        <p class=" mb-2"><strong class="color3">OBSERVAÇÕES:</strong></p>
+                        {% for obs in projeto_comentarios %}
+                        <p class="color5 mb-1">{{obs}}</p>
+                        {% endfor %}
+                        <form class=" mt-3">
+                            <div class="form-group" style="width: auto;">
+                                <label for="observacaoExtra" class=" color3"><strong>ADICIONAR OBSERVAÇÕES:</strong></label>
+                                <input type="text" class="form-control" id="observacaoExtra">
+                            </div>
+                            <button type="submit" class="btn btn-outline-info">Adicionar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card" id="rowCard">
+        <div class="row justify-content-center">
+            <div class="col-5 ml-3 mt-2">
+                <p class=" mb-2"><strong class="color3">COMENTÁRIOS:</strong></p>
+                {% for obs in projeto_comentarios %}
+                <p class="color5 mb-1">{{obs}}</p>
+                {% endfor %}
+            </div>
+            <div class="col-5 ml-3 mt-2">
+                <div class="form-group pl-0">
+                    <form>
+                        <div class="form-group" style="width: auto;">
+                            <label for="observacaoExtra" class=" color3"><strong>ADICIONAR COMENTÁRIOS:</strong></label>
+                            <input type="text" class="form-control" id="observacaoExtra">
+                        </div>
+                        <button type="submit" class="btn btn-outline-info">Adicionar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content%}
+<!-------------------------------------------------------->

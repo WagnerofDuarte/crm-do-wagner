@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+<!-------------------------------------------------------->
+{% block links %}
+<link rel="stylesheet" href="{{url_for('static', filename='css/posvenda.css')}}">
+{% endblock links %}
+<!-------------------------------------------------------->
+{% block content %}
+<div class="container" id="projetos">
+    <div class="row">
+        <div class="col col-6">
+            <ul>
+                <a href="projeto-especifico.html">
+                    <li>
+                        <div class="p-3">
+                            <p><strong>Projeto: </strong>CRM do Seu Kotler</p>
+                            <p><strong>Cliente: </strong>Kotler</p>
+                            <p><strong>Nota: </strong>10.0</p>
+                        </div>
+                    </li>
+                </a>
+            </ul>
+        </div>
+        <div class="col col-6">
+            <ul>
+                <a href="projeto-especifico.html">
+                    <li>
+                        <div class="p-3">
+                            <p><strong>Projeto: </strong>CRM do Seu Kot</p>
+                            <p><strong>Cliente: </strong>Kotler</p>
+                            <p><strong>Nota: </strong>10.0</p>
+                        </div>
+                    </li>
+                </a>
+            </ul>
+        </div>
+    </div>
+</div>
+
+{% endblock content%}
+<!-------------------------------------------------------->

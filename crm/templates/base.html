@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="{{url_for('static', filename='imgs/logo.png')}}" type="image/x-icon"/>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/indexx.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/bootstrap.css')}}">
+    
+    {% block links %}
+    {% endblock links %}
+    <title>CRM Seu Kotler</title>
+</head>
+
+<body>
+
+    <header>
+        <a href="#"><img id="logo" src="{{url_for('static', filename='imgs/logo.png')}}" alt="Logo"></a>
+        <nav id="menu">
+            <ul>
+                <li><a href="#">Clientes</a></li>
+                <li><a href="#">Projetos</a></li>
+                <li><a href="#">Pós-venda</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="marginBody wrapper">
+        <div class="container justify-content-center">
+            <div class="row">
+                <!-- Conteudo Aqui!!!-->
+                {% block content %}
+                {% endblock content%}
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p> ­© 2020 Pythonmancers. Todos os direitos reservados </p>
+    </footer>
+
+</body>
+</html>
