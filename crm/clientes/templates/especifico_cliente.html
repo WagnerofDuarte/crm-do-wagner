@@ -92,7 +92,20 @@
             <button type="submit" class="btn btn-outline-info">Cadastrar</button>
             <label for="">
                 <p class="cadastro">STATUS:
-            </label><input type="text" name="status" id="status" placeholder="Status do cliente" class="modal-form" /></p>
+            </label><div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <label class="input-group-text" for="inputGroupSelect01">Opções</label>
+                </div>
+                <select class="custom-select" id="inputGroupSelect01">
+                  <option selected>Status</option>
+                  <option value="1">Lead</option>
+                  <option value="2">Qualificado</option>
+                  <option value="3">Proposta enviada</option>
+                  <option value="4">Em negociação</option>
+                  <option value="5">Ativo</option>
+                  <option value="5">Perdido</option>
+                </select>
+              </div></p>
             <label for="">
                 <p class="cadastro">PROSPECÇÃO:
             </label><input type="text" name="prospeccao" id="prospeccao" placeholder="Prospecção" class="modal-form" /></p>
