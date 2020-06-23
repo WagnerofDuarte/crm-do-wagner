@@ -238,3 +238,39 @@ p.cadastro{
     transform: rotate(45deg);
     cursor: pointer;
 }
+
+.color1 {
+    color: #00BCE1;
+}
+
+.color2 {
+    color: #9ADBE8;
+}
+
+.color3{
+    color: #56DDEF;
+}
+
+.color4{
+    color: #4D4D4D;
+}
+
+.color5{
+    color: #000;
+}
+
+.color1Back{
+    background-color: #00BCE1;
+}
+
+.color2Back{
+    background-color: #9ADBE8;
+}
+
+.color3Back{
+    background-color: #56DDEF;
+}
+
+.color4Back{
+    background-color: #4D4D4D;
+}

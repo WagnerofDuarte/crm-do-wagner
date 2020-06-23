@@ -6,3 +6,4 @@ class Projeto(db.Model):
     id = db.Column(db.Integer, primary_key = True)
     nome = db.Column(db.String(30),nullable = False)
     comentarios = db.Column(db.String, nullable = True)
+    nota = db.Column(db.Integer, nullable = True)
