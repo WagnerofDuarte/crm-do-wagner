@@ -18,11 +18,11 @@
                 <div class="row">
                     <div class="col-5">
                         <strong class="color3">EMAIL: </strong>
-                        <p class="color5">crmseukotler.com.br</p>
+                        <p class="color5">{{cliente.email}}</p>
                         <strong class="color3">TELEFONE: </strong>
-                        <p class="color5">(31) 9 9718-2001 </p>
+                        <p class="color5">{{cliente.telefone}}</p>
                         <strong class="color3">PROSPECÇÃO: </strong>
-                        <p class="color5">ATIVA </p>
+                        <p class="color5">{{cliente.propeccao}} </p>
                         <div class="form-group pl-0">
                         </div>
                         <p><strong class="color3 mb-3">HISTORICO DE STATUS: </strong></p>
@@ -43,7 +43,7 @@
                     </div>
                     <div class="col-7 pl-0">
                         <strong class="color3">ENDERECO:</strong>
-                        <p class="color5">Rua dos Expedicionarios 1134<br>Santa Amelia<br>Belo Horizonte</p>
+                        <p class="color5">{{cliente.endereco}}</p>
                         <hr>
                         <button id="modalCliente" type="button" class="btn btn-outline-info">EDITAR INFORMAÇÕES</button>
                     </div>

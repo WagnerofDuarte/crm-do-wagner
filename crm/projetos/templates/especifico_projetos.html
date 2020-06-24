@@ -5,11 +5,13 @@
 {% endblock links %}
 <!-------------------------------------------------------->
 {% block content %}
+
 <div class=" row justify-content-center">
     <div class="card mb-3 d-inline-flex" id="rowCard">
         <div class="row">
             <div class="col-4">
-                <img src="{{url_for('static', filename='imgs/vasos.webp')}}" alt="Card image cap" class="rounded img-fluid">
+                <img src="{{url_for('static', filename='imgs/vasos.webp')}}" alt="Card image cap"
+                    class="rounded img-fluid">
             </div>
             <div class="col-8">
                 <h5><strong class="color1">{{projeto.nome}}</strong></h5>
@@ -34,7 +36,8 @@
                         {% endfor %}
                         <form class=" mt-3">
                             <div class="form-group" style="width: auto;">
-                                <label for="observacaoExtra" class=" color3"><strong>ADICIONAR OBSERVAÇÕES:</strong></label>
+                                <label for="observacaoExtra" class=" color3"><strong>ADICIONAR
+                                        OBSERVAÇÕES:</strong></label>
                                 <input type="text" class="form-control" id="observacaoExtra">
                             </div>
                             <button type="submit" class="btn btn-outline-info">Adicionar</button>

@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+<!-------------------------------------------------------->
+{% block links %}
+<link rel="stylesheet" href="{{url_for('static', filename='css/projeto-especifico.css')}}">
+<link rel="stylesheet" href="{{url_for('static', filename='css/posvenda.css')}}">
+{% endblock links %}
+<!-------------------------------------------------------->
+{% block content %}
+<div class=" container mb-5">
+    <div class=" row justify-content-center">
+        <nav class="navbar navbar-light bg-light">
+            <form class="form-inline" method="POST">
+                <input name="pesquisa" class="form-control mr-sm-2" type="text" placeholder="Projetos">
+                <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Buscar</button>
+            </form>
+        </nav>
+    </div>
+    <div class="row justify-content-center mt-5">
+        <div class=" col-6" id="">
+            {% for projeto in projetos %}
+            <ul>
+                <a href="{{url_for('projeto.especifico', _id=projeto.id)}}">
+                    <li>
+                        <div class="p-3">
+                            <p><strong>Projeto: </strong>{{projeto.nome[:36]}}</p>
+                        </div>
+                    </li>
+                </a>
+            </ul>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock content%}
+<!-------------------------------------------------------->
