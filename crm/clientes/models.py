@@ -1,4 +1,5 @@
 from crm import app, db
+from datetime import datetime
 
 class Cliente(db.Model):
     __tablename__ = "cliente"
@@ -13,3 +14,14 @@ class Cliente(db.Model):
     status = db.Column(db.String)
     datainsercao = db.Column(db.String)
     prospeccao = db.Column(db.String)
+
+    def __init__(self, nome, email,telefone, endereco, status, datainsercao, prospeccao):
+        self.nome = nome
+        self.email = email
+        self.telefone = telefone
+        self.endereco = endereco
+        self.status = status
+        self.datainsercao = datainsercao
+        self.prospeccao = prospeccao
+        self.historico_status = "0,0,0,0,0,0"
+        self.observacoes = "Sem comentarios Ainda!"

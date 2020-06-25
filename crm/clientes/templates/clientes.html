@@ -1,0 +1,167 @@
+{% extends 'base.html' %}
+<!-------------------------------------------------------->
+{% block links %}
+<link rel="stylesheet" href="{{url_for('static', filename='css/clientes.css')}}">
+{% endblock links %}
+<!-------------------------------------------------------->
+{% block content %}
+<h1>Clientes cadastrados</h1>
+        <div id="clientes">
+            <div class="container">
+                <button id="cadastro" class="btn btn-outline-info">Cadastrar Cliente</button>
+                <div class="row">
+                    <div class="col col-3 p-0">
+                        <p><h2 class="text-center">Leads</h2></p>
+                        <nav id="lead">
+                            <ul>
+                                {% for c in clientes %}
+                                {% if c.status == 'Lead' %}
+                                <a href="{{url_for('cliente.especifico',_id=c.id)}}">
+                                    <li>
+                                        <strong>Cliente:</strong>
+                                        <p>{{c.nome}}</p>
+
+                                        <strong>Telefone:</strong>
+                                        <p>{{c.telefone}}</p>
+
+                                        <strong>Data de Inserção:</strong>
+                                        <p>{{c.datainsercao}}</p>
+                                    </li>
+                                </a>
+                                {% endif %}
+                                {% endfor %}
+                                
+
+                            </ul>
+                        </nav>
+                    </div> 
+
+                    <div class="col col-3 p-0">
+                        <p><h2 class=" text-center">Qualificados</h2></p>
+                        <nav id="qualificados">
+                            <ul>
+                                {% for c in clientes %}
+                                {% if c.status == 'Qualificado' %}
+                                <a href="{{url_for('perfil',_id=c.id)}}">
+                                    <li>
+                                        <strong>Cliente:</strong>
+                                        <p>{{c.nome}}</p>
+
+                                        <strong>Telefone:</strong>
+                                        <p>{{c.telefone}}</p>
+
+                                        <strong>Data de Inserção:</strong>
+                                        <p>{{c.datainsercao}}</p>
+                                    </li>
+                                </a>
+                                {% endif %}
+                                {% endfor %}
+                                
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="col col-3 p-0">
+                        <p><h2 class=" text-center">Proposta Enviada</h2></p>
+                        <nav id="propenv">
+                            <ul>
+                                {% for c in clientes %}
+                                {% if c.status == 'Proposta Enviada' %}
+                                <a href="{{url_for('perfil',_id=c.id)}}">
+                                    <li>
+                                        <strong>Cliente:</strong>
+                                        <p>{{c.nome}}</p>
+
+                                        <strong>Telefone:</strong>
+                                        <p>{{c.telefone}}</p>
+
+                                        <strong>Data de Inserção:</strong>
+                                        <p>{{c.datainsercao}}</p>
+                                    </li>
+                                </a>
+                                {% endif %}
+                                {% endfor %}
+                                
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="col col-3 p-0">
+                        <p><h2 class=" text-center">Em Negociação</h2></p>
+                        <nav id="propneg">
+                            <ul>
+                                {% for c in clientes %}
+                                {% if c.status == 'Em Negociação' %}
+                                <a href="{{url_for('perfil',_id=c.id)}}">
+                                    <li>
+                                        <strong>Cliente:</strong>
+                                        <p>{{c.nome}}</p>
+
+                                        <strong>Telefone:</strong>
+                                        <p>{{c.telefone}}</p>
+
+                                        <strong>Data de Inserção:</strong>
+                                        <p>{{c.datainsercao}}</p>
+                                    </li>
+                                </a>
+                                {% endif %}
+                                {% endfor %}
+                                
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="col col-3 p-0">
+                        <p><h2 class=" text-center">Ativos</h2></p>
+                        <nav id="ativos">
+                            <ul>
+                                {% for c in clientes %}
+                                {% if c.status == 'Ativo' %}
+                                <a href="{{url_for('perfil',_id=c.id)}}">
+                                    <li>
+                                        <strong>Cliente:</strong>
+                                        <p>{{c.nome}}</p>
+
+                                        <strong>Telefone:</strong>
+                                        <p>{{c.telefone}}</p>
+
+                                        <strong>Data de Inserção:</strong>
+                                        <p>{{c.datainsercao}}</p>
+                                    </li>
+                                </a>
+                                {% endif %}
+                                {% endfor %}
+                                
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="col col-3 p-0">
+                        <p><h2 class=" text-center">Perdidos</h2></p>
+                        <nav id="perdidos">
+                            <ul>
+                                {% for c in clientes %}
+                                {% if c.status == 'Perdido' %}
+                                <a href="{{url_for('perfil',_id=c.id)}}">
+                                <li>
+                                    <strong>Cliente:</strong>
+                                    <p>{{c.nome}}</p>
+
+                                    <strong>Telefone:</strong>
+                                    <p>{{c.telefone}}</p>
+
+                                    <strong>Data de Inserção:</strong>
+                                    <p>{{c.datainsercao}}</p>
+                                </li>
+                            </a>
+                                {% endif %}
+                                {% endfor %}
+                                
+                            </ul>
+                        </nav>
+                    </div-->
+                </div>
+            </div>
+        </div>
+{% endblock content%}
+<!-------------------------------------------------------->

@@ -69,5 +69,83 @@
         </div>
     </div>
 </div>
+<div class="modaleira">
+    <div class="modaleira-content">
+        <div class="closee" >+</div>
+        <form action="" method="POST">
+            <label for="nome"><p class="cadastro">Projeto: </label><br/>
+            <input type="text" name="nome" id="nome" placeholder="Nome do Projeto" value="{{projeto.nome}}" class="modal-form-two"/> </p>
+            <label for="cliente"><p id="move" class="cadastro">Cliente: </label>
+            <input type="text" name="cliente" id="cliente" placeholder="Cliente" value="{{projeto.cliente}}" class="modal-form-three"/></p>
+            <label for="url"><p class="cadastro">Site: </label><br/>
+            <input type="text" name="url" id="url" placeholder="Url" value="{{projeto.url}}" class="modal-form-two"/></p>
+            <label for="valor"><p id="move" class="cadastro">Valor: </label>
+            <input type="number" name="valor" id="valor" placeholder="Valor do Projeto" value="{{projeto.valor}}" class="modal-form-three"/></p>
+            <label for="po"><p class="cadastro">PO: </label><br/>
+            <input type="text" name="po" id="po" placeholder="Product Owner" value="{{projeto.po}}" class="modal-form-two"/></p>
+            <label for="tipo"><p id="move" class="cadastro">Tipo: </label>
+                <select name="tipo" id="tipo" class="modal-form-three">
+                    <option value="Site">Site</option>
+                    <option value="Sistema Web">Sistema Web</option>
+                    <option value="Aplicativo">Aplicativo</option>
+                </select></p>
+            <label for="prazo"><p class="cadastro">Prazo: </label><br/>
+            <input type="date" name="prazo" id="prazo" value="{{projeto.prazo}}" class="modal-form-two"></p>
+            <label for="inicio"><p id="move" class="cadastro">Início: </label>
+            <input type="date" name="inicio" id="inicio" value="{{projeto.inicio}}" class="modal-form-three"></p>
+            <label for=""><p class="cadastro">Status: </label><br/>
+            <select name="status" id="status" class="modal-form-two">
+                <option value="Ativo">Ativo</option>
+                <option value="Concluido">Concluido</option>
+                <option value="Cancelado">Cancelado</option>
+            </select></p>
+            <label for=""><p style="display: none;" class="cadastro">Nota: </label>
+            <input style="display: none;" value="8"  type="number" name="nota" id="nota" value="8" class="modal-form-two"></p>
+            <button id="editar-projeto" type="submit" class="btn btn-outline-info">Editar</button>
+            <button id="botao" type="reset" class="btn btn-outline-danger">Cancelar</button>
+        </form>          
+    </div>
+</div>
+<div class='apagarprojeto'>
+    <div class="apagarprojeto-content" >
+        <div class="fechar" >+</div>
+        <p> Tem certeza que deseja apagar o projeto {{projeto.nome}}? </p>
+        <form action="" method="POST">
+        <button id="apagar" type="submit"  class='btn btn-outline-danger'>Confirmar</button>
+        <button id="cancelar" type="reset" class='btn btn-outline-secondary'>Cancelar</button>
+        </form>
+    </div>
+</div>
+<script>
+    document.getElementById('editarprojeto').addEventListener('click',
+    function() {
+        document.querySelector('.modaleira').style.display = 'flex'
+    });
+
+    document.querySelector('.closee').addEventListener('click',
+    function() {
+        document.querySelector('.modaleira').style.display = 'none'
+    });
+    document.getElementById('botao').addEventListener('click',
+    function() {
+        document.querySelector('.modaleira').style.display = 'none'
+    });
+</script>
+
+<script>
+    document.getElementById('apagarprojeto').addEventListener('click',
+    function() {
+        document.querySelector('.apagarprojeto').style.display = 'flex'
+    });
+
+    document.querySelector('.fechar').addEventListener('click',
+    function() {
+        document.querySelector('.apagarprojeto').style.display = 'none'
+    });
+    document.getElementById('cancelar').addEventListener('click',
+    function() {
+        document.querySelector('.apagarprojeto').style.display = 'none'
+    });
+</script>
 {% endblock content%}
 <!-------------------------------------------------------->

@@ -175,7 +175,24 @@ div p#money2 {
     margin-top: -10px;
 
 }
-.banana{
+p#mensagem{
+    color: #4d4d4d;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+div.banana{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    z-index: 2000;
+}
+div.modaleira{
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
@@ -197,6 +214,39 @@ div p#money2 {
     position: relative;
     animation: bg-modal .3s;
 }
+
+.modaleira-content{
+    width: 800px;
+    height: 500px;
+    background-color: white;
+    border-radius: 4px;
+    padding: 20px;
+    border: 3px solid #00bce1;
+    position: relative;
+    animation: bg-modal .3s;
+}
+.apagarprojeto{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    z-index: 2000;
+}
+.apagarprojeto-content{
+    width: 300px;
+    height: 200px;
+    background-color: white;
+    border-radius: 4px;
+    padding: 20px;
+    border: 3px solid #00bce1;
+    position: relative;
+    animation: bg-modal .3s;
+}
 @keyframes bg-modal{
     from{
         opacity: 0;
@@ -209,7 +259,7 @@ div p#money2 {
 }
 
 p.cadastro{
-    padding: 10px;
+    padding: 0px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15pt;
 }
@@ -217,60 +267,83 @@ p.cadastro{
     border: 1px solid #56DDEF;
     border-radius: 6px;
     height: 35px;
+    width: 735px;
+}
+.modal-form-two{
+    border: 1px solid #56DDEF;
+    border-radius: 6px;
+    height: 35px;
+    width: 350px;
+   
+}
+.modal-form-three{
+    border: 1px solid #56DDEF;
+    border-radius: 6px;
+    height: 35px;
+    width: 350px;
+    margin-bottom: 0px;
+}
+
+#cadastro-lead{
+    margin: 20px;
+    margin-left: 550px;
+    margin-right: 0px;
+}
+#cadastro-projeto{
+    
+    margin-left: 520px;
 }
 #move{
-    margin-top: -70px;
-    margin-left: 420px;
+    margin-top: -81px;
+    margin-left: 400px;
     padding-right: 0px;
     
 }
-#move2{
-    margin-top: -70px;
-    margin-left: 420px;
-    padding-right: 0px;
-    
-}
+ 
 .close{
     position: absolute;
     top: -7px;
     right: 0px;
-    font-size: 20pt;
+    font-size: 30pt;
     transform: rotate(45deg);
     cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    
 }
-
-.color1 {
-    color: #00BCE1;
+.closee{
+    position: absolute;
+    top: -15px;
+    right: 0px;
+    font-size: 30pt;
+    transform: rotate(45deg);
+    cursor: pointer;
+    color: gray;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
 }
-
-.color2 {
-    color: #9ADBE8;
+.fechar{
+    position: absolute;
+    top: -15px;
+    right: 0px;
+    font-size: 30pt;
+    transform: rotate(45deg);
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    color: gray;
+    font-weight: bold;
 }
-
-.color3{
-    color: #56DDEF;
+#apagar{
+    margin: 30px;
+    margin-right: 0px;
+    margin-left: 35px;
 }
-
-.color4{
-    color: #4D4D4D;
+#editar-projeto{
+    margin: -10px;
+    margin-left: 600px;
+    margin-right: 0px;
 }
-
-.color5{
-    color: #000;
-}
-
-.color1Back{
-    background-color: #00BCE1;
-}
-
-.color2Back{
-    background-color: #9ADBE8;
-}
-
-.color3Back{
-    background-color: #56DDEF;
-}
-
-.color4Back{
-    background-color: #4D4D4D;
-}
+input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }

@@ -73,47 +73,74 @@
         </div>
     </div>
 </div>
-<div class="bg-modal">
-    <div class="modal-content">
-        <div class="close">+</div>
+<div class="clientes-modal">
+    <div class="clientes-content">
+        <div class="fechar-cliente" >+</div>
         <form action="" method="POST">
-            <label for="">
-                <p class="cadastro">NOME:
-            </label><input type="text" name="cliente" id="nomecliente" placeholder="Nome do cliente" class="modal-form" /></p>
-            <label for="">
-                <p class="cadastro">EMAIL:
-            </label><input type="text" name="email" id="email" placeholder="Email do cliente" class="modal-form" /></p>
-            <label for="">
-                <p class="cadastro">TELEFONE:
-            </label><input type="text" name="telefone" id="telefone" placeholder="Telefone do cliente" class="modal-form" /></p>
-            <label for="">
-                <p class="cadastro">ENDEREÇO:
-            </label><input type="text" name="endereco" id="endereco" placeholder="Endereço do cliente" class="modal-form" /></p>
-            <button type="submit" class="btn btn-outline-info">Cadastrar</button>
-            <label for="">
-                <p class="cadastro">STATUS:
-            </label><input type="text" name="status" id="status" placeholder="Status do cliente" class="modal-form" /></p>
-            <label for="">
-                <p class="cadastro">PROSPECÇÃO:
-            </label><input type="text" name="prospeccao" id="prospeccao" placeholder="Prospecção" class="modal-form" /></p>
+            <label for=""><p class="cadastro">Cliente: </label><br><input type="text" name="nome" id="nome" value="{{cliente.nome}}" placeholder="Nome do Cliente" class="modal-form-two"/> </p>
+            <label for=""><p id="move" class="cadastro">Data: </label><input type="date" name="datainsercao" value="{{cliente.datainsercao}}" id="datainsercao" class="modal-form-three"></p>
+            <label for=""><p class="cadastro">Email: </label><br><input type="text" name="email" id="email" value="{{cliente.email}}" placeholder="Exemplo@exemplo.com" class="modal-form-two"/></p>
+            <label for=""><p id="move" class="cadastro">Telefone: </label><input type="tel" name="telefone" value="{{cliente.telefone}}" id="telefone" placeholder="(99) 9 9999-9999" class="modal-form-three"/></p>
+            <label for=""><p class="cadastro">Endereço: </label><br><input type="text" name="endereco" id="endereco" value="{{cliente.endereco}}" placeholder="Endereço" class="modal-form-two"/></p>
+            <label for=""><p id="move" class="cadastro">Status: </label><select name="status" id="status" class="modal-form-three">
+                <option value="Lead">Lead</option>
+                <option value="Qualificado">Qualificado</option>
+                <option value="Proposta Enviada">Proposta Enviada</option>
+                <option value="Em Negociação">Em Negociação</option>
+                <option value="Ativo">Ativo</option>
+                <option value="Perdido">Perdido</option>
+            </select></p>
+            <label for=""><p class="cadastro">Prospecção: </label><br><select id="prospeccao" name="prospeccao" class="modal-form-two">
+                <option value="Ativa">Ativa</option>
+                <option value="Passiva">Passiva</option>
+            </select></p>
+            
+            <button id="editar-cliente" type="submit" class="btn btn-outline-info">Cadastrar</button>
             <button id="botao" type="reset" class="btn btn-outline-danger">Cancelar</button>
         </form>
     </div>
 </div>
+<div class='apagarcliente'>
+    <div class="apagarcliente-content" >
+        <div class="fechar" >+</div>
+        <p> Tem certeza que deseja apagar o cliente {{cliente.nome}}? </p>
+        <form action="" method="POST">
+        <button id="apagar" type="submit"  class='btn btn-outline-danger'>Confirmar</button>
+        <button id="cancelar" type="reset" class='btn btn-outline-secondary'>Cancelar</button>
+        </form>
+    </div>
+</div>
 <script>
-    document.getElementById('modalCliente').addEventListener('click',
-        function () {
-            document.querySelector('.bg-modal').style.display = 'flex'
-        });
 
-    document.querySelector('.close').addEventListener('click',
-        function () {
-            document.querySelector('.bg-modal').style.display = 'none'
-        });
+    document.getElementById('editarcliente').addEventListener('click',
+    function() {
+        document.querySelector('.clientes-modal').style.display = 'flex'
+    });
+
+    document.querySelector('.fechar-cliente').addEventListener('click',
+    function() {
+        document.querySelector('.clientes-modal').style.display = 'none'
+    });
     document.getElementById('botao').addEventListener('click',
-        function () {
-            document.querySelector('.bg-modal').style.display = 'none'
-        });
+    function() {
+        document.querySelector('.clientes-modal').style.display = 'none'
+    });
+</script>
+<script>
+
+    document.getElementById('apagarcliente').addEventListener('click',
+    function() {
+        document.querySelector('.apagarcliente').style.display = 'flex'
+    });
+
+    document.querySelector('.fechar').addEventListener('click',
+    function() {
+        document.querySelector('.apagarcliente').style.display = 'none'
+    });
+    document.getElementById('cancelar').addEventListener('click',
+    function() {
+        document.querySelector('.apagarcliente').style.display = 'none'
+    });
 </script>
 {% endblock content%}
 <!-------------------------------------------------------->
